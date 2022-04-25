@@ -6,8 +6,7 @@ do {
     //SI LA VARIABLE RESULTADO ESTÁ VACÍA
     if (resultado == "") {
         resultado = resultado + cadena;
-    }
-    else {
+    } else {
         //CONCATENAMOS CON GUIÓN
         resultado = resultado + " - " + cadena;
     }
