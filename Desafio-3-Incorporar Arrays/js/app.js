@@ -12,119 +12,80 @@
 class Peliculas {
 
     constructor(titulo, genero, alquilar) {
-
         this.titulo = titulo;
         this.genero = genero;
         this.alquilar = alquilar;
-
     }
-
     obtenerDatos() {
-
         return `Titulo: ${this.titulo}.\nGenero: ${this.genero}.\nAlquilar: ${this.alquilar}.`;
-
     }
 }
 
 class Carrito {
-
     constructor() {
-
         this.peliculassSeleccionados = [];
-
     }
-
     agregarPeliculas(nuevoPeliculas) {
         this.peliculassSeleccionados.push(nuevoPeliculas);
     }
 
     eliminarPeliculas(peliculasAEliminar) {
-
         let index = this.peliculassSeleccionados.indexOf(peliculasAEliminar);
-
         this.peliculassSeleccionados.splice(index, 1);
     }
 
     obtenerPeliculassSeleccionados() {
-
         let auxPeliculassSeleccionados = [];
-
         for (let i = 0; i < this.peliculassSeleccionados.length; i++) {
-
             auxPeliculassSeleccionados.push(`Peliculas: ${i + 1}.\n` + this.peliculassSeleccionados[i].obtenerDatos() + "\n");
-
         }
 
         auxPeliculassSeleccionados.push(`\nIngrese 0 si no quiere eliminar ningun Peliculas.\n`);
-
         return auxPeliculassSeleccionados.join("\n");
-
     }
 }
 
 class Catalogo {
-
     constructor(peliculas, stock) {
         this.peliculas = peliculas;
         this.stock = stock;
     }
-
     agregarStock(cantidad) {
         this.stock += cantidad;
     }
-
     reducirStock(cantidad) {
         this.stock -= cantidad;
     }
-
     obtenerDatos() {
-
         return this.peliculas.obtenerDatos() + `\nStock: ${this.stock}.`;
-
     }
-
 }
 
 class Cine {
-
     constructor() {
-
         this.catalogo = [];
-
         this.carrito = new Carrito();
-
     }
-
     agregarCatalogoPeliculas(catalogo) {
         this.catalogo.push(catalogo);
     }
-
     obtenerCatalogo() {
-
         let auxCatalogo = [];
-
         for (let i = 0; i < this.catalogo.length; i++) {
-
             if (this.catalogo[i].stock > 0)
                 auxCatalogo.push(`Peliculas: ${i + 1}.\n` + this.catalogo[i].obtenerDatos() + "\n");
-
         }
-
         auxCatalogo.push(`\nIngrese 0 si no quiere agregar ningun Peliculas.\n`);
-
         return auxCatalogo.join("\n");
     }
-
     obtenerIndiceCatalogo(catalogo) {
         return this.catalogo.find(catalogo);
     }
-
 }
 
 
 
 /* ----------------------------------------------------------------------- */
-
 function cargaPreviaDatos() {
     const peliculas1 = new Peliculas("Vengadores: Endgame", "Accion", 900);
     const peliculas2 = new Peliculas("Avatar", "Ciencia ficción", 700);
@@ -142,9 +103,6 @@ function cargaPreviaDatos() {
 
     return cine;
 }
-
-
-
 
 const cine = cargaPreviaDatos();
 prompt(cine.obtenerCatalogo());
