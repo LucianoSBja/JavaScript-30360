@@ -20,7 +20,6 @@ class Peliculas {
         return `Titulo: ${this.titulo}.\nGenero: ${this.genero}.\nAlquilar: ${this.alquilar}.`;
     }
 }
-
 class Carrito {
     constructor() {
         this.peliculassSeleccionados = [];
@@ -44,7 +43,6 @@ class Carrito {
         return auxPeliculassSeleccionados.join("\n");
     }
 }
-
 class Catalogo {
     constructor(peliculas, stock) {
         this.peliculas = peliculas;
@@ -78,14 +76,17 @@ class Cine {
         auxCatalogo.push(`\nIngrese 0 si no quiere agregar ningun Peliculas.\n`);
         return auxCatalogo.join("\n");
     }
+
     obtenerIndiceCatalogo(catalogo) {
         return this.catalogo.find(catalogo);
     }
+
 }
 
 
 
 /* ----------------------------------------------------------------------- */
+
 function cargaPreviaDatos() {
     const peliculas1 = new Peliculas("Vengadores: Endgame", "Accion", 900);
     const peliculas2 = new Peliculas("Avatar", "Ciencia ficción", 700);
@@ -103,6 +104,9 @@ function cargaPreviaDatos() {
 
     return cine;
 }
+
+
+
 
 const cine = cargaPreviaDatos();
 prompt(cine.obtenerCatalogo());
