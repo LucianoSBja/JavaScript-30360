@@ -68,6 +68,7 @@ class Catalogo {
     }
 
 }
+
 class Cine {
 
     constructor() {
@@ -191,7 +192,7 @@ function eliminarProductoCarrito() {
 
 
 function finalizarCompra() {
-    let total = cine.carrito.productosSeleccionados.reduce((acumulador,elemento) => acumulador + elemento.alquilar,0);
+    let total = cine.carrito.productosSeleccionados.reduce((acumulador, elemento) => acumulador + elemento.alquilar, 0);
     alert(`Tu total de alquiler es:\n ${total}`);
 }
 
