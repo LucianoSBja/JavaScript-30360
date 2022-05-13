@@ -70,7 +70,7 @@ const getCard = (item) => {
             <h5 class="card-title">${item.nombre}</h5>
             <p class="card-title">Categoria: ${item.categoria}</p>
             <p class="card-text">$${item.alquiler}</p>
-            <a href="#" onclick=agregarCarrito(${item.id})  class="btn btn-primary">Agregar al Carrito</a>
+            <button onclick=agregarCarrito(${item.id})  class="btn btn-primary">Agregar al Carrito</button>
           </div>
       </div>
   </div>
@@ -83,8 +83,8 @@ const getRow = (item) => {
       <th scope="row">${item.id}</th>
       <td>${item.nombre}</td>
       <td>${item.cantidad}</td>
-      <td>${item.alquiler}</td>
-      <td><img src="${item.imagen}" class="img-thumbnail"/></td>
+      <td>$${item.alquiler} Total: ($${item.alquiler * item.cantidad})</td>
+      <td><img src="${item.imagen}" width="200" class="img-thumbnail"/></td>
   </tr>
 
   `)
@@ -100,14 +100,19 @@ const cargarProductos = (datos, nodo, esTabla) => {
 
 const agregarCarrito = (id) => {
   const seleccion = Peliculas.find(item => item.id === id);
+  const busqueda = carrito.findIndex(el => el.id === id);
 
-  carrito.push({
-    id: seleccion.id,
-    nombre: seleccion.nombre,
-    cantidad: 1,
-    imagen: seleccion.imagen,
-    alquiler: seleccion.alquiler
-  })
+  if (busqueda === -1) {
+      carrito.push({
+        id: seleccion.id,
+        nombre: seleccion.nombre,
+        cantidad: 1,
+        imagen: seleccion.imagen,
+        alquiler: seleccion.alquiler
+      })
+  } else {
+    carrito[busqueda].cantidad += 1;
+  }
 
   cargarProductos(carrito, tablaCarrito, true)
 
