@@ -12,15 +12,21 @@ function cargarEventos() {
     document.addEventListener('DOMContentLoaded', compra.leerLocalStorageCompra());
 
     //Eliminar productos del carrito
-    carrito.addEventListener('click', (e) => { compra.eliminarProducto(e) });
+    carrito.addEventListener('click', (e) => {
+        compra.eliminarProducto(e)
+    });
 
     compra.calcularTotal();
 
     //cuando se selecciona procesar Compra
     procesarCompraBtn.addEventListener('click', procesarCompra);
 
-    carrito.addEventListener('change', (e) => { compra.obtenerEvento(e) });
-    carrito.addEventListener('keyup', (e) => { compra.obtenerEvento(e) });
+    carrito.addEventListener('change', (e) => {
+        compra.obtenerEvento(e)
+    });
+    carrito.addEventListener('keyup', (e) => {
+        compra.obtenerEvento(e)
+    });
 
 
 }
@@ -37,8 +43,7 @@ function procesarCompra() {
         }).then(function () {
             window.location = "index.html";
         })
-    }
-    else if (cliente.value === '' || correo.value === '') {
+    } else if (cliente.value === '' || correo.value === '') {
         Swal.fire({
             type: 'error',
             title: 'Oops...',
@@ -46,9 +51,8 @@ function procesarCompra() {
             showConfirmButton: false,
             timer: 2000
         })
-    }
-    else {
-        
+    } else {
+
         //aqui se coloca el user id generado en el emailJS
         (function () {
             emailjs.init("user_CEozz2F39lJJOLF5mJiDA");
@@ -56,7 +60,7 @@ function procesarCompra() {
 
         var myform = $("form#procesar-pago");
 
-        myform.submit( (event) => {
+        myform.submit((event) => {
             event.preventDefault();
 
             // Change to your service ID, or keep using the default service
@@ -94,4 +98,3 @@ function procesarCompra() {
 
     }
 }
-
