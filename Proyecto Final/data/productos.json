@@ -1,0 +1,65 @@
+[
+	{
+		"id": 1,
+		"title": "Avengers: Endgame",
+		"imagen": "https://pics.filmaffinity.com/Vengadores_Endgame-135478227-large.jpg",
+		"precio": "500",
+		"detalles": ["Acción", "Aventura"]
+	},
+	{
+		"id": 2,
+		"title": "Avatar 2",
+		"imagen": "https://i.pinimg.com/originals/4d/d2/3b/4dd23b8120032cce4e9826f3cbffeafc.jpg",
+		"precio": "300",
+		"detalles": ["Acción", "Aventura"]
+	},
+	{
+		"id": 3,
+		"title": "Star Wars: Episodio IX",
+		"imagen": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-episode-vii-the-force-awakens-1541413640.png?crop=1xw:1xh;center,top&resize=480:*",
+		"precio": "400",
+		"detalles": ["Acción", "Aventura"]
+	},
+	{
+		"id": 4,
+		"title": "Spider-Man: No Way Home",
+		"imagen": "https://pics.filmaffinity.com/Spider_Man_No_Way_Home-164964839-large.jpg",
+		"precio": "500",
+		"detalles": ["Acción", "Aventura"]
+	},
+	{
+		"id": 5,
+		"title": "Top Gun: Maverick",
+		"imagen": "http://www.diarioclub.com/images/showid/5266856",
+		"precio": "500",
+		"detalles": ["Acción", "Aventura"]
+	},
+	{
+		"id": 6,
+		"title": "Jurassic World: Dominion",
+		"imagen": "https://img.ecartelera.com/noticias/fotos/68600/68697/1.jpg",
+		"precio": "200",
+		"detalles": ["Acción", "Aventura"]
+	},
+	{
+		"id": 7,
+		"title": "Doctor Strange 2",
+		"imagen": "https://lumiere-a.akamaihd.net/v1/images/image_451523ce.jpeg",
+		"precio": "800",
+		"detalles": ["Acción", "Aventura"]
+	},
+	{
+		"id": 8,
+		"title": "Lightyear",
+		"imagen": "https://lumiere-a.akamaihd.net/v1/images/p_243_ster_lightyear_9209f1b3.jpeg",
+		"precio": "800",
+		"detalles": ["Acción", "Aventura"]
+	},
+	{
+		"id": 9,
+		"title": "Thor: Love and Thunder",
+		"imagen": "https://es.web.img3.acsta.net/pictures/22/04/18/16/48/0259835.jpg",
+		"precio": "500",
+		"detalles": ["Acción", "Aventura"]
+	}
+]
