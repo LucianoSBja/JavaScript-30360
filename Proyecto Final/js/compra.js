@@ -63,7 +63,7 @@ function procesarCompra() {
 
         carrito.appendChild(textArea);
 
-        /* ------------------------- */
+        /* ------------------------- */  
 
         document.getElementById('procesar-pago')
             .addEventListener('submit', function (event) {
