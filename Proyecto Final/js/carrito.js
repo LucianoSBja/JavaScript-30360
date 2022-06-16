@@ -1,5 +1,4 @@
 class Carrito {
-
     //Añadir producto al carrito
     comprarProducto(e){
         e.preventDefault();
@@ -40,7 +39,7 @@ class Carrito {
         else {
             this.insertarCarrito(infoProducto);
         }
-        
+    
     }
 
     //muestra producto seleccionado en carrito
